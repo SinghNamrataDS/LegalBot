@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: Legalbot-based-on-RAG
+Version: 0.1
+Author: Namrata
+Requires-Dist: PyPDF2
+Requires-Dist: langchain
+Requires-Dist: langchain_google_genai
+Requires-Dist: google-generativeai
+Requires-Dist: langchain-astradb
+Requires-Dist: langchain-groq
+Requires-Dist: python-dotenv
+Requires-Dist: langchain-core
+Requires-Dist: langchain-openai
+Requires-Dist: gradio
+Dynamic: author
+Dynamic: requires-dist

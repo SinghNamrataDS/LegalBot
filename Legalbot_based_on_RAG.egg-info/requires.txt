@@ -1,0 +1,10 @@
+PyPDF2
+langchain
+langchain_google_genai
+google-generativeai
+langchain-astradb
+langchain-groq
+python-dotenv
+langchain-core
+langchain-openai
+gradio
