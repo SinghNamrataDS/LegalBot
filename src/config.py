@@ -12,7 +12,7 @@ class Config:
     EMBEDDED_MODEL = "text-embedding-3-large"
     RAG_MODEL = "llama-3.1-8b-instant"
  
-    DATA_DIR = Path("D:/PROJECT_LLMOPS/LEGAL_BOT/data")
+    DATA_DIR = Path("D:/PROJECTS/data")
    
     DOCUMENT_PATHS = [
         f"{DATA_DIR}/BNS.pdf",

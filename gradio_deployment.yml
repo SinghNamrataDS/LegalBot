@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: legal-bot
+  labels:
+    app: legal-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: legal-bot
+  template:
+    metadata:
+      labels:
+        app: legal-bot
+    spec:
+      containers:
+      - name: legal-bot-container
+        image: legal-bot:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 7860
+        envFrom:
+          - secretRef:
+              name: llmops-secrets
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: legal-bot-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: legal-bot
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 7860
+ 
